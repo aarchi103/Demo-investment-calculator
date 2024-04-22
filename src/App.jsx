@@ -17,10 +17,12 @@ function App() {
     setUserInput((prevUserInput) => {
       return {
         ...prevUserInput,
-        [inputIdentifier]: newValue
+        [inputIdentifier]: +newValue
       };
     });
   }
+
+  // +: The plus sign (+) in this context acts as the unary plus operator. Its primary purpose here is to convert newValue to a number, assuming it's a string or another data type that can be coerced into a number. If newValue is already a number, the plus operator has no effect.
 
   return (
     <>
